@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[搭建hexo博客]]></title>
     <url>%2F2019%2F04%2F29%2F%E6%90%AD%E5%BB%BAHEXO%2F</url>
-    <content type="text"><![CDATA[一、配置环境1.安装Node：用来生成静态页面；2.安装Git：把本地的hexo内容提交到github上去;3.申请GitHub：是用来做博客的远程创库、域名、服务器之类的;二、安装hexo1.创建一个文件夹,npm install -g hexo2.初始化:hexo init 初始化后的生成文件说明： (1)config.yml：全局的配置文件，每次更改要重启服务。 (2)public：生成的静态文件，这个目录最终会发布到服务器。 (3)scaffolds：通用的markdown模板，Hexo有三种默认布局： post 、 page 和 draft ，它们分别对应不同的路径。新建文件的默认布局是 post。 (4)themes：默认的皮肤文件夹，主题存放于该文件夹中。 (5)source：资源文件夹是存放用户资源的地方。编写的markdown文件会存放于此，_drafts草稿文件，_posts发布的文章。3.修改配置文件4.主题安装 (1)安装主题：git clone+主题地址 (2)启用主题：打开_config.yml文件找到theme字段将其值更改为主题名 (3)修改配置文件，启用主题5.运行 (1)清除缓存：hexo clean (2)生成静态页面：hexo generate （hexo g ） (3)预览调试：hexo server（hexo s）6.部署 (1)创建GitHub仓库； (2)安装部署工具：npm install hexo-deployer-git –save； (3)修改_config.yml文件； (4)部署网站：hexo d。]]></content>
+    <content type="text"><![CDATA[一、配置环境1.安装Node：用来生成静态页面；2.安装Git：把本地的hexo内容提交到github上去;3.申请GitHub：是用来做博客的远程创库、域名、服务器之类的;二、安装hexo1.创建一个文件夹,npm install -g hexo2.初始化:hexo init 初始化后的生成文件说明： (1)config.yml：全局的配置文件，每次更改要重启服务。 (2)public：生成的静态文件，这个目录最终会发布到服务器。 (3)scaffolds：通用的markdown模板，Hexo有三种默认布局： post 、 page 和 draft ，它们分别对应不同的路径。新建文件的默认布局是 post。 (4)themes：默认的皮肤文件夹，主题存放于该文件夹中。 (5)source：资源文件夹是存放用户资源的地方。编写的markdown文件会存放于此，_drafts草稿文件，_posts发布的文章。3.修改配置文件4.主题安装 (1)安装主题：git clone+主题地址 (2)启用主题：打开_config.yml文件找到theme字段将其值更改为主题名 (3)修改配置文件，启用主题5.运行 (1)清除缓存：hexo clean (2)生成静态页面：hexo generate （hexo g ） (3)预览调试：hexo server（hexo s）6.部署 (1)创建GitHub仓库； (2)安装部署工具：npm install hexo-deployer-git –save； (3)修改_config.yml文件； (4)部署网站：hexo d。7.访问线上网站 http://仓库名]]></content>
       <categories>
         <category>article</category>
       </categories>
