@@ -5,8 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, 堇沫煖_반홍범">
-    <meta name="description" content="分类 | 堇沫煖_반홍범">
+    <meta name="keywords" content="运行hexo, 堇沫煖_반홍범">
+    <meta name="description" content="一、步骤    1、d:           //cd到d盘    2、cd xxx       //cd到当前目录    3、hexo s       //运行hexo    4、hexo g       //部署    5、hexo c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>分类 | 堇沫煖_반홍범</title>
+    <title>运行hexo | 堇沫煖_반홍범</title>
     <link rel="icon" type="image/png" href="/favicons.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -265,117 +265,331 @@
     </nav>
 </header>
 
-<div class="bg-cover  about-cover" style="background-image: url('/medias/cover.jpg')">
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
-            <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+            <div class="col s12 m12 l12">
                 <div class="brand">
-                    <div class="title center-align" style="color: #ff0000">
-                    
-                    
-                    </div>
-
-                    <div class="description center-align" style="color: #ff0000">
-                    
-                        welcome to panpan's blog
-                    
+                    <div class="description center-align post-title">
+                        运行hexo
                     </div>
                 </div>
             </div>
         </div>
-        
     </div>
 </div>
 
-<script>
-// Dynamically switch banner pictures every day.
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.gif)');
-</script>
 
-<main class="content">
+
+<main class="container content">
 
     
-
-<div id="category-cloud" class="container chip-container">
+    <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">Post Categories</div>
-            <div class="tag-chips">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
                 
-                
-                
-                <a href="/categories/article/" title="article: 13">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default " style="background-color: #F9EBEA;">article
-                        <span class="tag-length">13</span>
-                    </span>
+                <a href="/tags/study/" target="_blank">
+                    <span class="chip bg-color">study</span>
                 </a>
                 
+                <a href="/tags/article/" target="_blank">
+                    <span class="chip bg-color">article</span>
+                </a>
                 
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                <!--<span class="post-cate" style="margin-right: 0px">-->
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/article/" class="post-category" target="_blank">
+                        article
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2019-04-26
+                </span>
+				
+				
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>一、步骤<br>    1、d:           //cd到d盘<br>    2、cd xxx       //cd到当前目录<br>    3、hexo s       //运行hexo<br>    4、hexo g       //部署<br>    5、hexo clean   //清除<br>二、常见错误<br>    1、config.xml文件没空格<br>    2、文章中出现大括号，无法识别。</p>
+
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff;
+        background-color: #22AB38;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff;
+        background-color: #019FE8;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a class="reward-link btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close"><i class="fa fa-close"></i></a>
+            <h5 class="reward-title">温馨提示，请不要随意的扫码</h5>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs">
+                        <li class="tab wechat-tab waves-effect waves-light"><a class="active" href="#wechat">微信</a></li>
+                        <li class="tab alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                    </ul>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-    
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
+<script>
+    $(function () {
+        $('#reward .reward-link').on('click', function () {
+            $('#rewardModal').openModal();
+        });
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
+        $('#rewardModal .close').on('click', function () {
+            $('#rewardModal').closeModal();
+        });
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
 </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">Reprint please specify: </span>
+                    <a href="http://yoursite.com" class="b-link-green">堇沫煖_반홍범</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2019/04/26/运行hexo/" class="b-link-green">运行hexo</a>
+                </p>
+            </div>
+        </div>
+    </div>
 
     
 
-    let option = {
-        title: {
-            left: 'center',
-            text: 'Post Categories Radar Chart',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"article","max":26}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [13],
-                    name : 'Number of Categories'
-                }
-            ]
-        }]
-    };
+    
 
-    radarChart.setOption(option);
-</script>
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">Previous</div>
+            <div class="card">
+                <a href="/2019/04/29/GIt的相关知识点/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="git的相关知识点">
+                        
+                        <span class="card-title">git的相关知识点</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">一、git的定义：（1）git是一款免费、开源的分布式（是建立在网络之上的软件系统）版本控制系统，用于敏捷高效的处理或大或小的项目；（2）Git是一个强调速度快的源代码管理工具；（3）每一个git工作目录都是一个完全独立的代码库，并拥有完整</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-29
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/article/" class="post-category" target="_blank">
+                                    article
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/study/" target="_blank">
+                        <span class="chip bg-color">study</span>
+                    </a>
+                    
+                    <a href="/tags/article/" target="_blank">
+                        <span class="chip bg-color">article</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">Next</div>
+            <div class="card">
+                <a href="/2019/04/26/vue/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="vue.js">
+                        
+                        <span class="card-title">vue.js</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">一、Vue.js    Vue（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架；    Vue 只关注视图层， 采用自底向上增量开发的设计；    Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/article/" class="post-category" target="_blank">
+                                    article
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/study/" target="_blank">
+                        <span class="chip bg-color">study</span>
+                    </a>
+                    
+                    <a href="/tags/article/" target="_blank">
+                        <span class="chip bg-color">article</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
     
 
 </main>
+
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">

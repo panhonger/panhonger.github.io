@@ -1,0 +1,655 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans">
+<head>
+    
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="nodejs的知识点(二), 堇沫煖_반홍범">
+    <meta name="description" content="一．NPM介绍：1.npm是NodeJS一起安装的包管理工具，常见的使用场景有三个，下载别人的包使用，下载别人的代码程序使用，上传自己的包或命令行供人家使用。2.Express安装在工程项目之下，调用方法：var express = req">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>nodejs的知识点(二) | 堇沫煖_반홍범</title>
+    <link rel="icon" type="image/png" href="/favicons.jpg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/header.jpg" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span" style="color: #ff0000">堇沫煖_반홍범</span>
+                    </a>
+                </div>
+                
+
+<a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home" style="color: #ff0000"></i>
+            
+            <span style="color: #ff0000">Index</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags" style="color: #ff0000"></i>
+            
+            <span style="color: #ff0000">Tags</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark" style="color: #ff0000"></i>
+            
+            <span style="color: #ff0000">Categories</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive" style="color: #ff0000"></i>
+            
+            <span style="color: #ff0000">Archives</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o" style="color: #ff0000"></i>
+            
+            <span style="color: #ff0000">About</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book" style="color: #ff0000"></i>
+            
+            <span style="color: #ff0000">Friends</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search" style="color: #ff0000"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/header.jpg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">堇沫煖_반홍범</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                Index
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Categories
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                Archives
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                Friends
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/panhonger/panhonger.github.io.git" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+
+    <div class="social-link"><a href="https://github.com/panhonger/panhonger.github.io.git" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github" style="color: #ff0000"></i>
+</a>
+<a href="mailto:1847709053@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件不要联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open" style="color: #ff0000"></i>
+</a>
+<a href="#!" class="tooltipped" data-tooltip="QQ不要联系我" data-position="top" data-delay="50">
+    <i class="fa fa-qq" style="color: #ff0000"></i>
+</a>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+        <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/panhonger/panhonger.github.io.git" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewbox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+    </svg>
+</a>
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        nodejs的知识点(二)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/study/" target="_blank">
+                    <span class="chip bg-color">study</span>
+                </a>
+                
+                <a href="/tags/article/" target="_blank">
+                    <span class="chip bg-color">article</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                <!--<span class="post-cate" style="margin-right: 0px">-->
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/article/" class="post-category" target="_blank">
+                        article
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2019-04-29
+                </span>
+				
+				
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>一．NPM介绍：<br>1.npm是NodeJS一起安装的包管理工具，常见的使用场景有三个，下载别人的包使用，下载别人的代码程序使用，上传自己的包或命令行供人家使用。<br>2.Express安装在工程项目之下，调用方法：<br>var express = require(‘express’);<br>3.Pacakage.json位于模块的目录之下，属于express包的文件，常用的属性说明如下：<br>（1）name - 包名；<br>（2）version - 包的版本号；<br>（3）description - 包的描述；<br>（4）homepage - 包的官网 url；<br>（5）author - 包的作者姓名；<br>（6）contributors - 包的其他贡献者姓名；<br>（7）dependencies - 依赖包列表。如果依赖包没有安装，npm 会自动将依赖包安装在 node_module 目录下；<br>（8）repository - 包代码存放的地方的类型，可以是 git 或 svn，git 可在 Github 上；<br>（9）main - main 字段指定了程序的主入口文件，require(‘moduleName’) 就会加载这个文件。这个字段的默认值是模块根目录下面的 index.js；<br>（10）keywords - 关键字<br>二．回调函数<br>（一）fs模块为nodejs的核心模块之一，主要处理文件的读写、复制、s删除、重命名等操作。当需要使用该模块时，需要先导入该文件：var fs = require(‘fs’);<br>（二）Fs常见的属性：<br>（1）fs.read(fd,buffer,offset,length,position,callback)：其功能为从指定的文件描述符 fd 中读取数据并写入 buffer 指向的缓冲区对象。<br>（2）fs.write(fd,buffer,offset,length[,position],callback)：功能为将buffer内容写入fd中。<br>（3）fs.readFile(file[,option],callback)：读取文件，同步读取<br>（4）fs.writeFile(file,data[,options],callback)：写入文件<br>（5）fs.createReadStream(path[,options])：以流的形式读取文件<br>（6）fs.createWriteStream(path[,options])：以流的形式写入文件<br>（7）fs.stat(path,callback)：该方法用于查询文件信息，其回调函数有两个参数（err, stats）。stats是一个fs.Stats对象，该对象中包含一个stats.isFile()方法。如果stats对象存在且stats.isFile()为true，才能确认要修改或删除的文件存在<br>（8）fs.access(path[,mode],callback)：该方法用于检查到指定path路径的目录或文件的访问权限<br>（9）fs.watch(filename [,options] [,listener])：可以监测文件的变动情况<br>（10）fs.watchFile(file[,options],listener) ：监听filename的变化，当该文件发生变化时，执行回调函数<br>（11）异步读取：fs.readFileSync( url , code );<br>三．事件循环<br>（一）Events模块是Node对“发布/订阅”模式（publish/subscribe）的实现。一个对象通过这个模块，向另一个对象传递消息：var events = require(‘events’)；<br>（1）通过实例化 EventEmitter 类来绑定和监听事件:var  eventEmitter = new.EventEmitter ();<br>（2）on方法用来监听事件(绑定),emit用来发出事件(触发)；<br>（二）EvenEmmiter:是events的对象，主要用于事件监听和事件触发的功能。<br>（1）evevemmiter的属性介绍：<br>①　addListener(event, listener)：为指定事件添加一个监听器到监听数组的尾部。<br>②　on(event, listener)：注册一个监听器，接受一个字符串event和一个回调函数。<br>③　once(event, listener)：添加一个单次监听器，监听一次之后触发之后立刻解除该监听器。<br>④　removeListener(event, listener)：移除某个已经注册过的监听器。<br>⑤　removeAllListeners([event])：移除所有事件或某个事件的所有监听器。<br>⑥　setMaxListeners(n)：用于提高监听器的数量（默认数量为10）。<br>⑦　listeners(event)：返回监听数组。<br>⑧　emit(event, [arg1], [arg2], […])：按参数的顺序执行每个监听器，如果事件有注册监听返回 true，否则返回 false。<br>⑨　listenerCount(emitter, event)：返回监听器的数量。<br>⑩　newListener：event - 字符串，事件名称，listener - 处理事件函数。该事件在添加新监听器时被触发。<br>⑪　removeListener：从指定监听器数组中删除一个监听器。需要注意的是，此操作将会改变处于被删监听器之后的那些监听器的索引。<br>（三）大多数时候我们不会直接使用 EventEmitter，而是在对象中继承它。<br>四．Buffer：JavaScript 语言自身只有字符串数据类型，没有二进制数据类型，所以定义了一个buffer类用来存放二进制的缓存区。<br>（一）写入缓存区：buf.write(string[, offset[, length]][, encoding])，string - 写入缓冲区的字符串,offset - 缓冲区开始写入的索引值，默认为 0 ,length - 写入的字节数，默认为 buffer.length,encoding - 使用的编码，默认为 ‘utf8’ 。<br>（二）读取数据：buf.toString([encoding[, start[, end]]])。<br>（三）将buffer转为json对象：buf.toJSON()，当字符串化一个 Buffer 实例时，JSON.stringify() 会隐式地调用该 toJSON()。<br>（四）缓冲区合并：Buffer.concat(list[, totalLength]，list - 用于合并的 Buffer 对象数组列表，totalLength - 指定合并后Buffer对象的总长度。<br>（五）缓冲区比较：buf.compare(otherBuffer)。<br>（六）拷贝缓冲区：buf.copy(targetBuffer[, targetStart[, sourceStart[, sourceEnd]]])。<br>（七）缓冲区剪裁：buf.slice([start[, end]])。<br>（八）缓冲区长度：buf.length。<br>五．Stream（流）：是一个抽象接口<br>（一）var zlib = require (‘zlib’); 它提供了Gzip/Gunzip,Deflate/Inflate和DeflateRaw/InflateRaw类的绑定。<br>（二）.pipe():管道流<br>五、模块系统:为了让NodeJS文件能够相互调用<br>（一）Export是模块的公开接口<br>（二）Require用于从外部获取模块的公开接口<br>六．路由：根据不同的url地址有不同的处理方式：<br>let router = express.router（）<br>七．全局变量：<br>（一）<br>（1）<strong>filename：当前正在执行的脚步的文件名（输出绝对路径）<br>（2）</strong>dirname:当前脚步所在的目录<br>（3）setTimeout(cb, ms)：全局函数在指定毫秒内执行指定函数(cb),只执行一次<br>（4）clearTimeout( t ) ：用于停止一个之前通过 setTimeout() 创建的定时器。 参数 t 是通过 setTimeout() 函数创建的定时器。<br>（5）setInterval(cb, ms) ：全局函数在指定的毫秒(ms)数后执行指定函数(cb)。它会一直调用函数，直到clearTimeout( t )被调用或窗口关闭<br>（二）console：<br>（1）console.log([data][, …])；向标准输出流打印字符并以换行符结束。<br>（2）console.info([data][, …])：返回信息性消息。<br>（3）console.error([data][, …])：输出错误消息的。<br>（4）console.warn([data][, …])：输出警告消息。<br>（5）console.dir(obj[, options])：用来对一个对象进行检查，以易于阅读和打印的格式显示。<br>（6）console.time(label)；输出时间，表示计时开始。<br>（7）console.timeEnd(label)：结束时间，表示计时结束。<br>（8）console.trace(message[, …])：当前执行的代码在堆栈中的调用路径。<br>（9）console.assert(value[, message][, …])；用于判断某个表达式或变量是否为真，接收两个参数，第一个参数是表达式，第二个参数是字符串。只有当第一个参数为false，才会输出第二个参数，否则不会有任何结果<br>（三）Process：它用于描述当前Node.js 进程状态的对象，提供了一个与操作系统的简单接口。<br>八．常用的工具：<br>（一）util.inherits(constructor, superConstructor)是一个实现对象间原型继承 的函数<br>（二）util.inspect(object,[showHidden],[depth],[colors])是一个将任意对象转换 为字符串的方法，通常用于调试和错误输出。它至少接受一个参数 object，即要转换的对象<br>（三）Util.Array(object):如果给定的参数 “object” 是一个数组返回true，否则返回false<br>（四）Util.isRegExp(object):如果给定的参数 “object” 是一个正则表达式返回true，否则返回false<br>（五）Util.Data(object):如果给定的参数 “object” 是一个日期返回true，否则返回false<br>（六）Util.isError(object):给定的参数是一个错误对象，那就返回true,否则返回false<br>九．文件系统：导入文件系统模块的语法： let fs = require.(‘fs’)<br>(一)fs.readFile:异步读取<br>(二)fs.readFileSync;同步读取<br>(三)fs.open(path,flags[,mode],callback):打开文件<br>path - 文件的路径。<br>flags - 文件打开的行为：<br>     r：以读取模式打开文件。如果文件不存在抛出异常。<br>      r+:以读写模式打开文件。如果文件不存在抛出异常。<br>  rs:以同步的方式读取文件。<br>  rs+:以同步的方式读取和写入文件<br>  w:以写入模式打开文件，如果文件不存在则创建。<br>  wx：类似 ‘w’，但是如果文件路径存在，则文件写入失败。<br>  w+：以读写模式打开文件，如果文件不存在则创建。<br>  wx+:类似 ‘w+’， 但是如果文件路径存在，则文件读写失败。<br>  a：以追加模式打开文件，如果文件不存在则创建。<br>  ax：类似 ‘a’， 但是如果文件路径存在，则文件追加失败。<br>  a+：以读取追加模式打开文件，如果文件不存在则创建。<br>  ax+：类似 ‘a+’， 但是如果文件路径存在，则文件读取追加失败。<br>mode - 设置文件模式(权限)，文件创建默认权限为 0666(可读，可写)。<br>callback - 回调函数，带有两个参数如：callback(err, fd)。<br>(四)fs.stat(path,callback):通过异步获取文件信息<br>（1）stats.isFile()：如果是文件返回true；<br>（2）stats.isDirectory()：如果是目录返回true；<br>（3）stats.isBlockDevice()：如果是块设备返回true；<br>（4）stats.isCharacterDevice()：如果是字符设备返回true；<br>（5）stats.isSymbolicLink()：如果是软链接返回true；<br>（6）stats.isFIFO()：如果是FIFO，返回true，否则返回 false。FIFO是UNIX中的一种特殊类型的命令管道。<br>（7）stats.isSocket()：如果是 Socket 返回 true，否则返回 false。<br>(五)fs.writeFile(file, data[, options], callback):写入文件<br>(六)fs.read(fd, buffer, offset, length, position, callback)：<br>fd - 通过 fs.open() 方法返回的文件描述符。<br>buffer - 数据写入的缓冲区。<br>offset - 缓冲区写入的写入偏移量。<br>length - 要从文件中读取的字节数。<br>position - 文件读取的起始位置，如果 position 的值为 null，则会从当前文件指针的位置读取。<br>callback - 回调函数，有三个参数err, bytesRead, buffer，err 为错误信息， bytesRead 表示读取的字节数，buffer 为缓冲区对象。<br>(七)fs.close(fd, callback)：关闭文件<br>(八)fs.ftruncate(fd, len, callback)：截取文件<br>(九)fs.unlink(path, callback)：删除文件<br>(十)fs.mkdir(path[, mode], callback)：创建目录<br>(十一)fs.readdir(path, callback)：读取目录<br>(十二)fs.rmdir(path, callback)：删除目录<br>十、get/post请求<br>（一）get：可以用util.parse来解析url里的参数<br>十一、工具模块<br>（一）var os = require(“os”)：os 模块提供了一些基本的系统操作函数。<br>（二）var path = require(“path”)：提供了一些处理文件路劲的小工具。<br>（三）var net = require(“net”):用于底层的网络通信<br>（1）net.Server通常用于创建一个 TCP 或本地服务器。<br>（2）Net.socket对象是 TCP 或 UNIX Socket 的抽象。net.Socket 实例实现了一个双工流接口。<br>（四）var dns = require(“dns”)：用于解析域名<br>（五）var domain = require(“domain”)：用于捕捉try catch都无法捕捉到的异步异常。<br>十二、express：是一个应用框架，可以快速地搭建一个完整功能的网站<br>（一）request请求：request 对象表示 HTTP 请求，包含了请求查询字符串，参数，内容，HTTP 头部等属性。常见属性有：<br>（1）req.app：当callback为外部文件时，用req.app访问express的实例。<br>（2）req.baseUrl：获取路由当前安装的URL路径。<br>（3）req.body / req.cookies：获得「请求主体」/ Cookies，主要用于接收post的请求。<br>（4）Req.fresh:用来判断req,res中的HTTP头是否依然有效。<br>（5）req.hostname / req.ip：获取主机名和IP地址。<br>（6）req.originalUrl：获取原始请求URL。<br>（7）req.params：获取路由的parameters，一个数组，包含命名过的路由参数。<br>（8）req.path：获取请求路径。<br>（9）req.protocol：获取协议类型。<br>（10）req.query：获取URL的查询参数串，用于接收get请求。<br>（11）req.route：获取当前匹配的路由。<br>（12）eq.subdomains：获取子域名。<br>（13）req.accepts()：检查可接受的请求的文档类型。<br>（14）eq.acceptsCharsets / req.acceptsEncodings / req.acceptsLanguages：返回指定字符集的第一个可接受字符编码。<br>（15）req.get()：获取指定的HTTP请求头。<br>（16）req.is()：判断请求头Content-Type的MIME类型<br>（二）Response相应：<br>(1)res.app：同req.app一样<br>(2)res.append()：追加指定HTTP头<br>(3)res.set()在res.append()后将重置之前设置的头<br>(4)res.cookie(name，value [，option])：设置Cookie opition: domain / expires / httpOnly / maxAge / path / secure / signed<br>(5)res.clearCookie()：清除Cookie<br>(6)res.download()：传送指定路径的文件<br>(7)res.get()：返回指定的HTTP头<br>(8)res.json()：传送JSON响应<br>(9)res.jsonp()：传送JSONP响应<br>(10)res.location()：只设置响应的Location HTTP头，不设置状态码或者close response<br>(11)res.redirect()：设置响应的Location HTTP头，并且设置状态码302<br>(12)res.render(view,[locals],callback)：渲染一个view，同时向callback传递渲染后的字符串，如果在渲染过程中有错误发生next(err)将会被自动调用。callback将会被传入一个可能发生的错误以及渲染后的页面，这样就不会自动输出了。<br>(13)res.send()：传送HTTP响应<br>(14)res.sendFile(path [，options] [，fn])：传送指定路径的文件 -会自动根据文件extension设定Content-Type<br>(15)res.set()：设置HTTP头，传入object可以一次设置多个头<br>(16)res.status()：设置HTTP状态码<br>(17)res.type()：设置Content-Type的MIME类型<br>（三）路由决定由谁去相应请求<br>十三、多进程：<br>1.exec() 方法：使用子进程执行命令，缓存子进程的输出，并将子进程的输出以回调函数参数的形式返回。exec() 方法返回最大的缓冲区，并等待进程结束，一次性返回缓冲区的内容。<br>2.Spawn：使用指定的命令行参数创建新进程。spawn() 方法返回流 (stdout &amp; stderr)，在进程返回大量数据时使用。进程一旦开始执行时 spawn() 就开始接收响应。<br>3.Fork: 是 spawn() 方法的特殊形式，用于创建进程。会有一个内建通道。<br>十四、与MySQL的连接：var mysql  = require(‘mysql’);<br>十五、与MongoDB的连接：<br>1.创建数据库:要在 MongoDB 中创建一个数据库，首先我们需要创建一个 MongoClient 对象，然后配置好指定的 URL 和 端口号。<br>2.创建集合：createCollection() 。<br>3.数据库操作：与 MySQL 不同的是 MongoDB 会自动创建数据库和集合，所以使用前我们不需要手动去创建。<br>（1）insertOne()：插入一条数据；.insertOne(key(数据), function(err, res) {})<br>（2）insertMany()：插入多条数据；.insertMany([数据], function(err, res) {}）<br>（3）find()：查询数据；. find({条件}).toArray(function(err, result) {}）<br>（4）updateOne():更新一条:.updateOne(whereStr(条件), updateStr（数据updateStr={$set:{“”:“”}}）, function(err, res) {})<br>(5)updateMany():更新多条数据：.updateMany(whereStr, updateStr, function(err, res) {}）<br>（6）deleteOne():删除单条数据；.deleteOne(whereStr, function(err, obj) {})<br>(7)deleteMany():删除多条：.deleteMany(whereStr, function(err, obj) {})<br>(8)sort()；排序：{ type: 1 }  // 按 type 字段升序 { type: -1 } // 按 type 字段降序<br>（9）limit()：分页查询：.find().limit(num).toArray(function(err, result) {})<br>(10)$lookup:左连接<br>(11)drop():删除集合：.drop(function(err, delOK) {})<br>十六、promise和async/await的区别<br>（1）async更简洁，避免了嵌套代码<br>（2）错误处理：async可以用try/catch捕获错误，但是promise只能用.catch，代码更加的冗余<br>（3）条件语句：promise可能需要嵌套一层又一层的.then来获取值，最终只需要最外层的值，而async只需要return一次就可以，减少了代码的冗余。<br>（4）错误栈：promise链中返回的错误栈没有给出错误发生的位置线索，错误栈中唯一的函数名为callAPromise，和错误没有关系，而async会指向错误所在的函数。<br>十七、exports和module.exports的区别<br>1.exports是module.exports的一个引用，exports=module.exports={}<br>2.module.exports=xxx，相当于导出某个函数，在另一个文件中引用后可直接调用<br>3.exports.xxx和module.exports.xxx相当于把函数或变量挂载在对象上，在另一个文件中应用后，通过调用对象属性和方法进行使用</p>
+
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff;
+        background-color: #22AB38;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff;
+        background-color: #019FE8;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a class="reward-link btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close"><i class="fa fa-close"></i></a>
+            <h5 class="reward-title">温馨提示，请不要随意的扫码</h5>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs">
+                        <li class="tab wechat-tab waves-effect waves-light"><a class="active" href="#wechat">微信</a></li>
+                        <li class="tab alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                    </ul>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#reward .reward-link').on('click', function () {
+            $('#rewardModal').openModal();
+        });
+
+        $('#rewardModal .close').on('click', function () {
+            $('#rewardModal').closeModal();
+        });
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">Reprint please specify: </span>
+                    <a href="http://yoursite.com" class="b-link-green">堇沫煖_반홍범</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2019/04/29/nodejs的知识点（二)/" class="b-link-green">nodejs的知识点(二)</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">Previous</div>
+            <div class="card">
+                <a href="/2019/04/29/杂合知识/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="杂合知识">
+                        
+                        <span class="card-title">杂合知识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">1.isnull,ifnull,nullif：（1）isnull(expr) 的用法：如expr 为null，那么isnull() 的返回值为 1，否则返回值为 0。（2）IFNULL(expr1,expr2)的用法：假如expr1   不</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-29
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/article/" class="post-category" target="_blank">
+                                    article
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/study/" target="_blank">
+                        <span class="chip bg-color">study</span>
+                    </a>
+                    
+                    <a href="/tags/article/" target="_blank">
+                        <span class="chip bg-color">article</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">Next</div>
+            <div class="card">
+                <a href="/2019/04/29/GIt的相关知识点/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="git的相关知识点">
+                        
+                        <span class="card-title">git的相关知识点</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">一、git的定义：（1）git是一款免费、开源的分布式（是建立在网络之上的软件系统）版本控制系统，用于敏捷高效的处理或大或小的项目；（2）Git是一个强调速度快的源代码管理工具；（3）每一个git工作目录都是一个完全独立的代码库，并拥有完整</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/article/" class="post-category" target="_blank">
+                                    article
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/study/" target="_blank">
+                        <span class="chip bg-color">study</span>
+                    </a>
+                    
+                    <a href="/tags/article/" target="_blank">
+                        <span class="chip bg-color">article</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            
+			
+        </div>
+        <div class="col s12 m4 l4 social-link "><a href="https://github.com/panhonger/panhonger.github.io.git" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github" style="color: #ff0000"></i>
+</a>
+<a href="mailto:1847709053@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件不要联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open" style="color: #ff0000"></i>
+</a>
+<a href="#!" class="tooltipped" data-tooltip="QQ不要联系我" data-position="top" data-delay="50">
+    <i class="fa fa-qq" style="color: #ff0000"></i>
+</a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input" autofocus>
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/js/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+
+</body>
+</html>
