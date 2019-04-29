@@ -147,7 +147,7 @@
   <entry>
     <title><![CDATA[git的提交]]></title>
     <url>%2F2019%2F04%2F26%2FGit%E7%9A%84%E6%8F%90%E4%BA%A4%2F</url>
-    <content type="text"><![CDATA[不创建ssh密钥的情况下的提交： 1、git init 2、git pull –rebase https://github.com/panhonger/Synthesize_games.git master 3、git add . 4、git commit -m ‘文件名’ 5、git remote add origin https://github.com/panhonger/Synthesize_games.gitgit push origin master]]></content>
+    <content type="text"><![CDATA[不创建ssh密钥的情况下的提交： 1、git init 2、git pull —rebase https://github.com/panhonger/Synthesize_games.git master 3、git add . 4、git commit -m ‘文件名’ 5、git remote add origin https://github.com/panhonger/Synthesize_games.git6、git push origin master]]></content>
       <categories>
         <category>article</category>
       </categories>
